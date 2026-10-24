@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VELOCITY — Premium Automotive Digital Showroom. Curated engineering, timeless silhouettes, and uncompromising performance. Final project for BTNG Frontend.">
+  <meta name="theme-color" content="#0C0C0C">
+
+  <title>VELOCITY — Premium Automotive Digital Showroom</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="brand-wordmark" aria-label="VELOCITY Homepage">
+        VELOCITY<span class="brand-accent">.</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#collection" class="nav-link">Collection</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="header-actions">
+        <a href="#collection" class="btn btn-outline-nav">Explore Cars</a>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <span class="brand-wordmark">VELOCITY<span class="brand-accent">.</span></span>
+          <button type="button" class="btn-close-drawer" id="btn-close-drawer" aria-label="Close menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav" aria-label="Mobile Navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#collection" class="mobile-nav-link">Collection</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-drawer-footer">
+          <a href="#collection" class="btn btn-primary btn-block mobile-drawer-cta">Explore Cars</a>
+          <p class="mobile-drawer-meta">Premium Automotive Digital Showroom</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <!-- Hero Editorial Text -->
+        <div class="hero-content">
+          <div class="hero-label-wrap">
+            <span class="label-pip"></span>
+            <span class="editorial-label">THE AUTOMOTIVE COLLECTION</span>
+          </div>
+
+          <h1 class="hero-headline">
+            DRIVE YOUR<br>
+            <span class="headline-contrast">NEXT CHAPTER.</span>
+          </h1>
+
+          <p class="hero-description">
+            Curated engineering, timeless silhouettes, and uncompromising performance. Welcome to VELOCITY — an editorial digital showroom presenting premier motorcars for the discerning driver.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#collection" class="btn btn-primary">
+              <span>Explore Collection</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#about" class="btn-text-link">
+              <span>Discover VELOCITY</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value" id="hero-stat-total">--</span>
+              <span class="metric-label">Curated Vehicles</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value" id="hero-stat-available">--</span>
+              <span class="metric-label">Available Now</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value" id="hero-stat-brands">--</span>
+              <span class="metric-label">Pinnacle Brands</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Automotive Showcase Media -->
+        <div class="hero-media-wrapper">
+          <div class="hero-frame">
+            <div class="hero-badge-overlay">
+              <span class="pulse-indicator"></span>
+              <span class="hero-badge-text" id="hero-badge-title">CURATED SPOTLIGHT</span>
+            </div>
+            <div class="hero-image-box">
+              <img 
+                id="hero-car-image" 
+                src="assets/images/fallback-car.svg" 
+                alt="Featured automotive spotlight at VELOCITY"
+                loading="eager"
+                fetchpriority="high"
+              >
+            </div>
+            <div class="hero-caption" id="hero-car-caption">
+              <div class="hero-caption-info">
+                <span class="caption-brand" id="hero-car-brand">SHOWROOM FEATURE</span>
+                <span class="caption-name" id="hero-car-name">Loading premier catalog...</span>
+              </div>
+              <a href="#collection" class="caption-action" aria-label="View spotlight vehicle in collection">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Indicator -->
+      <a href="#collection-intro" class="scroll-indicator" aria-label="Scroll down to vehicle collection">
+        <span class="scroll-text">SCROLL TO DISCOVER</span>
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- COLLECTION INTRODUCTION -->
+    <section class="collection-intro-section" id="collection-intro">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-heading-block">
+            <span class="section-tag">CATALOG PHILOSOPHY</span>
+            <h2 class="section-title">Machines with Character</h2>
+          </div>
+          <div class="intro-desc-block">
+            <p class="intro-paragraph">
+              Every vehicle in our collection represents a deliberate statement in automotive craftsmanship. From electrified grand tourers and track-bred compacts to commanding luxury off-roaders, each machine is cataloged with authentic specifications directly from our live registry.
+            </p>
+            <div class="live-counter-strip">
+              <div class="counter-badge">
+                <span class="counter-num" id="stat-total-count">-</span>
+                <span class="counter-label">Total in Showroom</span>
+              </div>
+              <div class="counter-badge active-badge">
+                <span class="counter-num" id="stat-available-count">-</span>
+                <span class="counter-label">Currently Available</span>
+              </div>
+              <div class="counter-badge sold-badge">
+                <span class="counter-num" id="stat-sold-count">-</span>
+                <span class="counter-label">Archived / Sold</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VEHICLE COLLECTION MAIN SECTION -->
+    <section class="collection-section" id="collection">
+      <div class="container">
+        <!-- Controls Bar: Search, Filters, Sorting, Reset -->
+        <div class="catalog-controls" role="search" aria-label="Filter and search collection">
+          <!-- Search Input -->
+          <div class="control-group search-group">
+            <label for="search-input" class="control-label">Search Catalog</label>
+            <div class="input-with-icon">
+              <svg class="control-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="search" 
+                id="search-input" 
+                class="form-control" 
+                placeholder="Search by vehicle name or brand (e.g. Civic, BYD)..."
+                autocomplete="off"
+              >
+              <button type="button" class="btn-clear-search" id="btn-clear-search" aria-label="Clear search text" hidden>
+                &times;
+              </button>
+            </div>
+          </div>
+
+          <!-- Brand Filter -->
+          <div class="control-group">
+            <label for="filter-brand" class="control-label">Brand</label>
+            <div class="select-wrapper">
+              <select id="filter-brand" class="form-control form-select">
+                <option value="all">All Brands</option>
+              </select>
+              <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Fuel Type Filter -->
+          <div class="control-group">
+            <label for="filter-fuel" class="control-label">Fuel Type</label>
+            <div class="select-wrapper">
+              <select id="filter-fuel" class="form-control form-select">
+                <option value="all">All Fuel Types</option>
+              </select>
+              <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Sort Order -->
+          <div class="control-group">
+            <label for="sort-by" class="control-label">Sort By</label>
+            <div class="select-wrapper">
+              <select id="sort-by" class="form-control form-select">
+                <option value="default">Default Showroom Order</option>
+                <option value="price-asc">Price: Lowest First</option>
+                <option value="price-desc">Price: Highest First</option>
+                <option value="year-desc">Year: Newest First</option>
+                <option value="name-asc">Vehicle Name: A to Z</option>
+              </select>
+              <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Reset Button -->
+          <div class="control-group reset-group">
+            <label class="control-label">&nbsp;</label>
+            <button type="button" id="btn-reset-filters" class="btn btn-reset" title="Reset all search queries and filters">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              <span>Reset Filters</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Status & Result Count Bar -->
+        <div class="filter-status-bar" id="filter-status-bar" aria-live="polite">
+          <div class="results-count">
+            Showing <strong id="visible-count">0</strong> of <span id="total-count">0</span> motorcars
+          </div>
+          <div class="active-tags-list" id="active-tags-list">
+            <!-- Active filter chips will be dynamically rendered here -->
+          </div>
+        </div>
+
+        <!-- DYNAMIC VEHICLE CONTENT AREA -->
+        <div id="catalog-content-area">
+          <!-- Loading State (rendered initially) -->
+          <div class="state-container loading-state" id="loading-state">
+            <div class="skeleton-grid">
+              <div class="skeleton-card">
+                <div class="skeleton-media"></div>
+                <div class="skeleton-body">
+                  <div class="skeleton-line short"></div>
+                  <div class="skeleton-line medium"></div>
+                  <div class="skeleton-pills"></div>
+                  <div class="skeleton-line price"></div>
+                </div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton-media"></div>
+                <div class="skeleton-body">
+                  <div class="skeleton-line short"></div>
+                  <div class="skeleton-line medium"></div>
+                  <div class="skeleton-pills"></div>
+                  <div class="skeleton-line price"></div>
+                </div>
+              </div>
+              <div class="skeleton-card">
+                <div class="skeleton-media"></div>
+                <div class="skeleton-body">
+                  <div class="skeleton-line short"></div>
+                  <div class="skeleton-line medium"></div>
+                  <div class="skeleton-pills"></div>
+                  <div class="skeleton-line price"></div>
+                </div>
+              </div>
+            </div>
+            <p class="loading-caption">Fetching authenticated live inventory from BTNG API...</p>
+          </div>
+
+          <!-- Error State (hidden by default) -->
+          <div class="state-container error-state" id="error-state" hidden>
+            <div class="state-icon-box error-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="state-title">Unable to Connect to Showroom Registry</h3>
+            <p class="state-message" id="error-message">
+              We encountered an issue communicating with the live BTNG vehicle endpoint. Please check your network connection or verify API service availability.
+            </p>
+            <button type="button" class="btn btn-primary" id="btn-retry-fetch">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+              </svg>
+              <span>Retry Connection</span>
+            </button>
+          </div>
+
+          <!-- Empty Results State (hidden by default) -->
+          <div class="state-container empty-state" id="empty-state" hidden>
+            <div class="state-icon-box">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="state-title">No Matching Vehicles Found</h3>
+            <p class="state-message">
+              No vehicles in our current showroom match your selected criteria. Try adjusting your search query, switching fuel options, or resetting all filters.
+            </p>
+            <button type="button" class="btn btn-outline" id="btn-empty-reset">
+              Reset All Filters
+            </button>
+          </div>
+
+          <!-- Active Vehicle Grid -->
+          <div class="vehicle-grid" id="vehicles-grid" aria-label="Vehicle catalog">
+            <!-- Cards rendered dynamically via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-header">
+          <span class="section-tag">BRAND PHILOSOPHY & STORY</span>
+          <h2 class="section-title">The Digital Showroom Reimagined.</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-narrative">
+            <p class="lead-text">
+              VELOCITY was conceived as a digital exploration of automotive prestige — an online showroom where engineering discipline meets editorial clarity.
+            </p>
+            <p class="body-text">
+              Rather than overwhelming visitors with noisy commercial banners or inflated specifications, VELOCITY prioritizes intentional typography, precise specifications, and authentic photographic provenance. Every vehicle in this showcase reflects a living record pulled directly from the BTNG API registry.
+            </p>
+            <p class="body-text">
+              Designed and built for the BTNG Frontend final project, this platform demonstrates how vanilla web standards — HTML5, CSS3, and modern JavaScript — can produce a refined, responsive, and resilient digital experience without the overhead of heavy third-party frameworks.
+            </p>
+
+            <div class="student-notice-box">
+              <div class="notice-badge">ACADEMIC SHOWCASE</div>
+              <p class="notice-text">
+                <strong>Project Scope:</strong> VELOCITY is an educational frontend project developed for the BTNG program. It serves as a concept digital showroom powered by the official BTNG API endpoint. It does not represent a commercial dealership or authorized vehicle retailer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Editorial Pillars -->
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-num">01</div>
+              <h3 class="pillar-title">Curated Precision</h3>
+              <p class="pillar-desc">
+                From electric silhouettes to turbocharged grand tourers, each vehicle is presented with authenticated data: year, transmission, fuel architecture, and pricing.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">02</div>
+              <h3 class="pillar-title">Live API Provenance</h3>
+              <p class="pillar-desc">
+                Direct integration with the live REST endpoint provides dynamic inventory updates, immediate status indicators, and responsive search filtering.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-num">03</div>
+              <h3 class="pillar-title">Editorial Restraint</h3>
+              <p class="pillar-desc">
+                Rooted in deep black and warm ivory tones with selective racing orange highlights, the interface creates an immersive, magazine-grade viewing atmosphere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-wordmark footer-logo">
+            VELOCITY<span class="brand-accent">.</span>
+          </a>
+          <p class="footer-tagline">
+            Curated automotive excellence for the modern connoisseur. A digital showroom concept built with web standards.
+          </p>
+          <div class="footer-status-pill">
+            <span class="live-pulse"></span>
+            <span>API Online & Connected</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Showroom Home</a></li>
+            <li><a href="#collection">Curated Collection</a></li>
+            <li><a href="#about">About VELOCITY</a></li>
+            <li><a href="#home" class="back-to-top-link">Back to Top &uarr;</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-tech-col">
+          <h4 class="footer-col-title">Project Details</h4>
+          <ul class="footer-specs">
+            <li><span>Course:</span> BTNG Frontend Track</li>
+            <li><span>Stack:</span> HTML5 &bull; CSS3 &bull; Vanilla JS</li>
+            <li><span>Endpoint:</span> DNCC UDINUS API</li>
+            <li><span>Design:</span> Dark Editorial Minimalism</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-line">
+          &copy; <span id="current-year">2026</span> VELOCITY. Developed for the BTNG Frontend Final Project.
+        </p>
+        <p class="disclaimer-line">
+          Concept showroom demonstration. Vehicle imagery and data sourced via BTNG REST API.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ACCESSIBLE VEHICLE DETAIL MODAL -->
+  <!-- Following Modern Web Guidance: closedby="any", showModal(), fallback backdrop click script -->
+  <dialog id="vehicle-modal" class="vehicle-dialog" closedby="any" aria-labelledby="modal-vehicle-name">
+    <div class="dialog-shell">
+      <!-- Modal Close Button -->
+      <button type="button" class="btn-dialog-close" id="btn-close-modal" aria-label="Close vehicle specifications dialog">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Content Body -->
+      <div class="modal-content-grid">
+        <!-- Vehicle Media Preview -->
+        <div class="modal-media-col">
+          <div class="modal-img-wrap">
+            <img id="modal-vehicle-image" src="assets/images/fallback-car.svg" alt="Vehicle preview">
+            <div class="modal-status-badge" id="modal-vehicle-status">AVAILABLE</div>
+          </div>
+          <div class="modal-photo-caption">
+            <span>Showroom Archive Record #<span id="modal-vehicle-id">--</span></span>
+            <span class="caption-dot">&bull;</span>
+            <span id="modal-vehicle-ruang">Public Collection</span>
+          </div>
+        </div>
+
+        <!-- Vehicle Details Info -->
+        <div class="modal-info-col">
+          <div class="modal-header-block">
+            <span class="modal-brand" id="modal-vehicle-brand">BRAND</span>
+            <h2 class="modal-title" id="modal-vehicle-name">Vehicle Model Name</h2>
+            <div class="modal-price-wrap">
+              <span class="price-label">SHOWROOM VALUATION</span>
+              <span class="modal-price" id="modal-vehicle-price">Rp 0</span>
+            </div>
+          </div>
+
+          <!-- Full Specifications Table / List -->
+          <div class="specs-block">
+            <h3 class="specs-heading">Technical Specifications</h3>
+            <dl class="specs-dl">
+              <div class="spec-row">
+                <dt class="spec-term">Brand Origin</dt>
+                <dd class="spec-def" id="modal-spec-brand">--</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-term">Manufacturing Year</dt>
+                <dd class="spec-def" id="modal-spec-year">--</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-term">Transmission Type</dt>
+                <dd class="spec-def" id="modal-spec-transmission">--</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-term">Fuel Architecture</dt>
+                <dd class="spec-def" id="modal-spec-fuel">--</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-term">Showroom Status</dt>
+                <dd class="spec-def" id="modal-spec-status">--</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-term">Catalog Registry ID</dt>
+                <dd class="spec-def" id="modal-spec-id">#--</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Dialog Footer Action -->
+          <div class="modal-action-footer">
+            <button type="button" class="btn btn-outline" id="btn-modal-dismiss">
+              Close Specification
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-modal-inquire">
+              <span>Inquire About Vehicle</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Inquiry Toast / Notification Feedback -->
+          <div class="modal-toast" id="modal-inquiry-toast" hidden role="status" aria-live="polite">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Inquiry simulation noted! This showroom showcases live API data for BTNG.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- JavaScript Application Entrypoint -->
+  <script src="js/app.js"></script>
+</body>
+</html>
